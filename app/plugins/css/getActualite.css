@@ -1,0 +1,144 @@
+
+/* <!-- en mettre sur accueil --> */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#about{
+  background-color: #dbeee3cb;
+  font-family: Arial;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (max-width:700px) {
+  #about{
+    height: 100vh;
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  height: 90vh;
+  margin: 0 auto;
+}
+
+/* The actual content */
+.contentTime {
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.contentTime p{
+  margin: 10px;
+  text-align: left;
+  
+}
+.overflow{
+  height: 86vh;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+#header .logo{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.lien {
+  text-decoration: none;
+  color: rgb(21, 21, 100);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0,3s ease;
+ }
+
+ .lien:hover{
+  /* color: #fdc93b; */
+  color: #07c210;
+ }
+li{
+list-style:square
+
+}
+.video, .imgs{
+  width: 100%;
+}
+.profile{
+  background: #ffffff;
+  padding: 40px 10px;
+ }
+ .profile .pro-link{
+    margin-top: 10px;
+ }
+ .profile  .fab{
+  padding: 10px 13px;
+  border: 1px solid rgb(21, 21, 100);
+  cursor: pointer;
+  transition: 0.3s ease;
+ }
+ .profile  .fab:hover{
+  background: rgb(21, 21, 100);
+  background: rgb(27, 165, 80);
+  color: #fff;
+  border: 1px solid rgb(21, 21, 100);
+  cursor: pointer;
+
+ }
+ 
+ .cardImg{
+  height: 157px;
+  width: 157px;
+}
+.video{
+  min-height: 300px;
+  max-height: 400px;
+}
+/* // media query */
+ 
+.contenPub{
+  min-height: auto;
+  max-height:73vh ;
+  overflow: auto;
+}
+.marketing{
+  max-height:90vh ;
+  overflow: auto;
+}
+@media screen and (max-width:700px) {
+
+  #about{
+    height: auto;
+    padding-bottom: 20px;
+    padding: 0;
+    padding-top:20px ;
+
+  }
+  #about h3{
+    font-size: 16px;
+  }
+  #about h5{
+    font-size: 14px;
+  }
+  #about .contenPub{
+    font-size: 13px;
+  }
+  .datePub{
+    font-size: 12px;
+  }
+  #about .container-lg .timeline{
+    width: 100%;
+    height: auto;
+    margin: -20px;
+    padding: 0;
+  }
+}
+#biographieForm{
+  min-height: auto;
+  max-height: 340px;
+  overflow: auto;
+}
