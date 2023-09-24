@@ -12,6 +12,8 @@
     <script src="<?=EE?>app/plugins/js/swal.all.js"></script>
     <script src="<?=EE?>app/plugins/js/all.js"></script>
     <link rel="stylesheet" href="<?=EE?>app/plugins/css/customCarousel.css?t=<?=time()?>">
+    <link rel="stylesheet" href="<?=EE?>app/plugins/template/css/adminlte.min.css">
+
 
 
     <!-- cdn plugins -->
@@ -36,7 +38,6 @@
 
     <!-- animation effects -->
     <script src="<?=EE?>app/plugins/js/wow.min.js"></script>
-
 
     <script src="<?=EE?>app/plugins/js/owl.carousel.min.js"></script>
 

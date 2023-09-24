@@ -157,14 +157,16 @@ class Logins extends App{
         }
     }
     public function setPassword($idComp=null){
+        $_SESSION['idComp']= isset($idComp)? $this->vichuwa($idComp) : $_SESSION['idComp'];
         if(isset($_POST['btnCompte'])){
             if(!empty($_POST['password']) && !empty($_POST['password2'])){
                 if(strlen($_POST['password'])>6){
                     if($_POST['password']===$_POST['password2']){
-                        $this->idCompt=!empty($idComp)? $this->vichuwa($idComp) : NULL;
+                        $this->idCompt=isset($idComp)? $this->vichuwa($idComp) : NULL;
                         $this->password=sha1($_POST['password']);
-                        $compte=$this->Login->setPassword($this->idCompt,$this->password);
+                        $compte=$this->Login->setPassword( $_SESSION['idComp'],$this->password);
                         $this->seConnecter();
+                       
                     }
                     else{
                         $this->erreur="Les mots de passe ne correspondent pas";

@@ -14,7 +14,7 @@ abstract class Controller{
         ob_start();
         require_once(ROOT.'views/'.strtolower(get_class($this)).'/'.$fichier.'.php');
         $content=ob_get_clean();
-        require_once(ROOT.'views/loyouts/default.php');
+        require_once(ROOT.'views/layouts/app.php');
     }
     public function getUser(){
         

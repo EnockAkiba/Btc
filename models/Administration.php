@@ -59,12 +59,18 @@ class Administration extends Model {
     }
 
     public function neverInscrit(){
-        $sql="SELECT User.idUser,User.nomsUser,User.photoUser,User.sexeUser FROM utilisateur AS User WHERE User.idUser not IN (SELECT idUser from formateur) and User.idUser NOT IN (SELECT IdUser FROM apprenant)";
+        $sql="
+        SELECT User.idUser,User.nomsUser,User.photoUser,User.sexeUser FROM utilisateur AS User
+        inner JOIN compte ON compte.idUser=User.idUser 
+        WHERE compte.roleUser='apprenant' and User.idUser not IN (SELECT idUser from formateur) and User.idUser
+         NOT IN (SELECT IdUser FROM apprenant)
+        ";
         $tab=$this->prepare($sql,[],false);
         return $tab;
     }
 
     public function inscrire($idUser,$idProm,$matriculeIns,$extensionIns,$vacationIns,$nomResp,$numResp){
+        
         $matriculeIns=htmlspecialchars(strip_tags($matriculeIns));
         $extensionIns=htmlspecialchars(strip_tags($extensionIns));
         $vacationIns=htmlspecialchars(strip_tags($vacationIns));
